@@ -1,3 +1,4 @@
+import TechSlider from './TechSlider'
 const Home = () => {
     return(
         <div id='homepage'>
@@ -10,6 +11,9 @@ const Home = () => {
                     <p
                     id='welcome-text'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Sui officia deserunt mollit anim id est laborum."</p>
                 </div>
+            </div>
+            <div id='tech-container'>
+                <TechSlider />
             </div>
         </div>
     )
