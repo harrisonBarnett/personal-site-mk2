@@ -22,6 +22,12 @@ const Contact = () => {
                 className='contact-group-img'
                 src={CodePen}></img>
             </li>
+            <li
+            className='contact-group'>
+                <div 
+                className='contact-group-img'
+                id='sunbear'></div>
+            </li>
         </ul>
     )
 }
