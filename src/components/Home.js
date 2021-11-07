@@ -1,5 +1,11 @@
+import {NavLink} from 'react-router-dom'
 import TechSlider from './TechSlider'
 const Home = () => {
+    const Link = () => {
+        return(
+            <NavLink to='/projects'>here</NavLink>
+        )
+    }
     return(
         <div id='homepage'>
             <div
@@ -9,11 +15,13 @@ const Home = () => {
                 </div>
                 <div id='welcome-text-container'>
                     <p
-                    id='welcome-text'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Sui officia deserunt mollit anim id est laborum."</p>
+                    id='welcome-text'>You're looking at a highly-motivated, self-taught developer looking for a breakthrough
+                     opportunity as a professional software developer. Please regard this site as proof that I know how to play  
+                    on computers. You are welcome to peruse a selection of the technologies I have studied thus far below. Check
+                    out some of my projects {<Link />} and feel free to contact me through any channel you prefer.</p>
                 </div>
             </div>
             <div id='tech-container'>
-                <h2>tech</h2>
                 <TechSlider />
             </div>
         </div>

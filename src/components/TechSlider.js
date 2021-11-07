@@ -30,7 +30,6 @@ const TechSlider = () => {
       loop={true}
       loopedSlides={12}
       centeredSlides={true}
-      navigation
       mousewheel
       autoplay={{
           delay: 2500,

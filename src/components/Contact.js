@@ -1,6 +1,7 @@
 import Github from '../static/images/tech-images/github-logo.png'
 import LinkedIn from '../static/images/tech-images/linkedin-logo.png'
 import CodePen from '../static/images/tech-images/codepen-logo.png'
+import Gmail from '../static/images/tech-images/gmail-logo.png'
 const Contact = () => {
     return(
         <ul id='contact-container'>
@@ -21,6 +22,12 @@ const Contact = () => {
                 <img 
                 className='contact-group-img'
                 src={CodePen}></img>
+            </li>
+            <li
+            className='contact-group'>
+                <img 
+                className='contact-group-img'
+                src={Gmail}></img>
             </li>
             <li
             className='contact-group'>
