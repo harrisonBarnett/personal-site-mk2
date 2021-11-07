@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+/* font-family: 'Merriweather', serif; */
 :root {
     --primary-color: #708d9d;
 }
@@ -6,6 +8,8 @@ html, body {
     padding: 0;
 
     font-size: 16px;
+
+    font-family: 'Merriweather';
 }
 #root {
     width: 100%;
