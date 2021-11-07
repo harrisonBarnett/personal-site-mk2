@@ -1,7 +1,7 @@
 import Tilt from 'react-parallax-tilt'
-import projectNames from '../static/ProjectInfo'
+import projectInfo from '../static/ProjectInfo'
 const ProjectGrid = () => {
-    const mapped = projectNames.map(name => {
+    const mapped = projectInfo.map(info => {
         return (
         <Tilt
         className='project-item'
@@ -9,7 +9,42 @@ const ProjectGrid = () => {
         tiltMaxAngleX={5}
         tiltMaxAngleY={5}
         >
-            <h2>{name}</h2>
+            <div className='project-item-title'>
+                <h2>{info.title}</h2>
+                <div className='project-item-links'>
+                    <a href={info.repoLink}>repo</a>
+                    <p>|</p>
+                    <a href={info.liveLink}>live</a>
+                </div>
+            </div>
+            
+            <div 
+            className='project-item-header-img'
+            style={{backgroundImage: `url(${info.headerImg})`}}>
+            </div>
+
+            <div className='project-item-mid'>
+                <div
+                className='project-item-accent-img'
+                style={{backgroundImage: `url(${info.accentImg})`}}
+                >
+                </div>
+                <div
+                className='project-item-lists'>
+                    <ul className='project-item-list-left'>
+                        {info.stack.map(el => {
+                            return <li key={el}>{el}</li>
+                        })}
+                    </ul>
+                    <ul className='project-item-list-right'>
+                        {info.skills.map(el => {
+                            return <li key={el}>{el}</li>
+                        })}
+                    </ul>
+                </div>
+            </div>
+            
+            <p className='project-item-description'>{info.description}</p>
         </Tilt>
         ) 
     })

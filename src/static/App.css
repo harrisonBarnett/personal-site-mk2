@@ -241,14 +241,68 @@ html, body {
     gap: 2rem;
 }
 .project-item {
-    height: 50vmax;
+    height: 45vmax;
     width: 40vmax;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 
     border: 1px solid black;
     box-shadow: 
     2px 2px 4px rgba(0,0,0,.15),
     2px 2px 8px rgba(0,0,0,.15);
 }
+.project-item-title,
+.project-item-links,
+.project-item-mid,
+.project-item-lists {
+    display: flex;
+}
+.project-item li,
+.project-item p {
+    font-size: 1.6vmax;
+}
+.project-item-title {
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+}
+.project-item-title h2 {
+    font-weight: 300;
+}
+.project-item-links {
+    margin-left: auto;
+    gap: .5em;
+}
+.project-item-header-img {
+    height: 33%;
+    width: 90%;
+    margin: 0 auto;
+    background: black;
+}
+.project-item-mid {
+    height: 33%;
+    width: 90%;
+    gap: 1rem;
+
+    margin: 0 auto;
+}
+.project-item-lists {
+    gap: 1rem;
+    line-height: 1.6;
+}
+.project-item-accent-img {
+    height: 100%;
+    aspect-ratio: 1;
+    background: black;
+}
+.project-item-description {
+    width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
 /* PROJECT PAGE MEDIA QUERIES */
 @media only screen and (max-width: 750px) {
     #projects-grid {
