@@ -13,6 +13,7 @@ const Home = () => {
                 </div>
             </div>
             <div id='tech-container'>
+                <h2>tech</h2>
                 <TechSlider />
             </div>
         </div>

@@ -28,7 +28,7 @@ const TechSlider = () => {
       spaceBetween={50}
       slidesPerView={5}
       loop={true}
-      loopedSlides={11}
+      loopedSlides={12}
       centeredSlides={true}
       navigation
       mousewheel

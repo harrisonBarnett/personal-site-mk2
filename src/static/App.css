@@ -1,3 +1,6 @@
+:root {
+    --primary-color: #708d9d;
+}
 html, body {
     margin: 0;
     padding: 0;
@@ -21,7 +24,7 @@ html, body {
 }
 #page-content {
     min-height: 33vh;
-    max-width: 1400px;
+    width: 90%;
     margin: 0 auto;
 }
 /* header */
@@ -67,7 +70,7 @@ html, body {
     height: 33vh;
     min-height: 250px;
 
-    background: rgba(0,0,0,1);
+    background: #708d9d;
 }
 #contact-container {
     position: absolute;
@@ -108,6 +111,7 @@ html, body {
     justify-content: space-around;
 }
 #welcome-img {
+    position: relative;
     width: 25vmax;
     height: 25vmax;
     max-width: 300px;
@@ -118,6 +122,28 @@ html, body {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50%;
+}
+#welcome-img::before {
+    position: absolute;
+    content: '';
+    top: -4%;
+    left: -8%;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);  
+}
+#welcome-img::after {
+    position: absolute;
+    content: '';
+    bottom: -4%;
+    right: -8%;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);  
 }
 #welcome-text-container {
     width: 50vmax;
@@ -144,7 +170,7 @@ html, body {
     width: 100%;
     height: 100%;
 
-    border: 2px solid rgb(142, 142, 142);
+    border: 2px solid var(--primary-color);
     box-shadow: 
     -2px -2px 8px rgba(0,0,0,.1),
     -4px -4px 12px rgba(0,0,0,.1)
@@ -158,13 +184,19 @@ html, body {
     width: 90%;
     height: 75%;
 
-    border-right: 2px solid rgb(142, 142, 142);
-    border-bottom: 2px solid rgb(142, 142, 142);
+    border-right: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
     box-shadow: 4px 4px 4px rgba(0,0,0,.1);
 }
 /* tech */
 #tech-container {
+    position: relative;
     margin-bottom: 4rem;
+}
+#tech-container h2 {
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 .swiper-slide {
     width: 8vmax;
@@ -176,4 +208,8 @@ html, body {
 .swiper-slide img {
     width: 8vmax;
     max-width: 100px;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    color: var(--primary-color);
 }
