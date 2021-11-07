@@ -9,8 +9,10 @@ const App = ()=> {
   return (
     <Router>
       <Header />
-      <Route exact path='/' component={Home} />
-      <Route path='/projects' component={Projects} />
+      <div id='page-content'>
+        <Route exact path='/' component={Home} />
+        <Route path='/projects' component={Projects} />
+      </div>
       <Footer />
     </Router>
   )
