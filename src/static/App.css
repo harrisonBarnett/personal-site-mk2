@@ -137,7 +137,7 @@ html, body {
 #welcome-img::before {
     position: absolute;
     content: '';
-    top: -4%;
+    top: -8%;
     left: -8%;
     z-index: -1;
     height: 100%;
@@ -148,7 +148,7 @@ html, body {
 #welcome-img::after {
     position: absolute;
     content: '';
-    bottom: -4%;
+    bottom: -8%;
     right: -8%;
     z-index: -1;
     height: 100%;

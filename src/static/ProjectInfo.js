@@ -1,7 +1,7 @@
 const projectNames = [
-    'project-one',
-    'project-two',
-    'project-three',
-    'project-four'
+    'frag-a-frigate',
+    'doStuff',
+    'reactMemory',
+    'res-u-mator'
 ]
 export default projectNames

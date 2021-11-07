@@ -9,7 +9,7 @@ const ProjectGrid = () => {
         tiltMaxAngleX={5}
         tiltMaxAngleY={5}
         >
-            <p>{name}</p>
+            <h2>{name}</h2>
         </Tilt>
         ) 
     })
