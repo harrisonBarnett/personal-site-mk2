@@ -1,5 +1,5 @@
 import Tilt from 'react-parallax-tilt'
-import projectInfo from '../static/ProjectInfo'
+import projectInfo from '../static/projectInfo'
 const ProjectGrid = () => {
     const mapped = projectInfo.map(info => {
         return (
@@ -8,19 +8,21 @@ const ProjectGrid = () => {
         tiltReverse={true}
         tiltMaxAngleX={5}
         tiltMaxAngleY={5}
-        >
+        key={info.title}>
             <div className='project-item-title'>
                 <h2>{info.title}</h2>
                 <div className='project-item-links'>
-                    <a href={info.repoLink}>repo</a>
+                    <a href={info.repoLink} target='_blank'>repo</a>
                     <p>|</p>
-                    <a href={info.liveLink}>live</a>
+                    <a href={info.liveLink} target='_blank'>live</a>
                 </div>
             </div>
             
             <div 
             className='project-item-header-img'
-            style={{backgroundImage: `url(${info.headerImg})`}}>
+            style={{
+                backgroundImage: `url(${info.headerImg})`
+            }}>
             </div>
 
             <div className='project-item-mid'>

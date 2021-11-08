@@ -1,10 +1,15 @@
+import resumatorLong from './images/project-images/resumator-long.PNG'
+import resumatorSquare from './images/project-images/resumator-square.PNG'
+import memoryLong from './images/project-images/memory-long.PNG'
+import memorySquare from './images/project-images/memory-square.PNG'
+
 const projectInfo = [
     {
         title: 'res-u-mator',
-        repoLink: '#',
-        liveLink: '#',
-        headerImg: '',
-        accentImg: '',
+        repoLink: 'https://github.com/harrisonBarnett/resumator',
+        liveLink: 'https://harrisonbarnett.github.io/resumator/',
+        headerImg: resumatorLong,
+        accentImg: resumatorSquare,
         stack: [
             'javascript',
             'react',
@@ -22,10 +27,10 @@ const projectInfo = [
     },
     {
         title: 'memory time',
-        repoLink: '#',
-        liveLink: '#',
-        headerImg: '',
-        accentImg: '',
+        repoLink: 'https://github.com/harrisonBarnett/reactMemory',
+        liveLink: 'https://harrisonbarnett.github.io/reactMemory/',
+        headerImg: memoryLong,
+        accentImg: memorySquare,
         stack: [
             'javascript',
             'react',

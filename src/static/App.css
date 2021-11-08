@@ -248,7 +248,6 @@ html, body {
     flex-direction: column;
     gap: 1rem;
 
-    border: 1px solid black;
     box-shadow: 
     2px 2px 4px rgba(0,0,0,.15),
     2px 2px 8px rgba(0,0,0,.15);
@@ -275,11 +274,16 @@ html, body {
     margin-left: auto;
     gap: .5em;
 }
+.project-item-header-img,
+.project-item-accent-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .project-item-header-img {
     height: 33%;
     width: 90%;
     margin: 0 auto;
-    background: black;
 }
 .project-item-mid {
     height: 33%;
@@ -295,7 +299,6 @@ html, body {
 .project-item-accent-img {
     height: 100%;
     aspect-ratio: 1;
-    background: black;
 }
 .project-item-description {
     width: 90%;
