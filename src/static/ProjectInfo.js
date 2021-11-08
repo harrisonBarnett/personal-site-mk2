@@ -2,6 +2,8 @@ import resumatorLong from './images/project-images/resumator-long.PNG'
 import resumatorSquare from './images/project-images/resumator-square.PNG'
 import memoryLong from './images/project-images/memory-long.PNG'
 import memorySquare from './images/project-images/memory-square.PNG'
+import wlLong from './images/project-images/wl-long.PNG'
+import wlSquare from './images/project-images/wl-square.PNG'
 
 const projectInfo = [
     {
@@ -66,10 +68,10 @@ const projectInfo = [
     },
     {
         title: 'wl_',
-        repoLink: '#',
+        repoLink: 'https://github.com/harrisonBarnett/wl_',
         liveLink: '#',
-        headerImg: '',
-        accentImg: '',
+        headerImg: wlLong,
+        accentImg: wlSquare,
         stack: [
             'python',
             'flask',
@@ -82,7 +84,9 @@ const projectInfo = [
             'auth',
             'CRUD'
         ],
-        description: 'this is an app and it sure is an app'
+        description: 'An olympic weightlifting CRUD application for novices ' +
+        'that provides progressive overload based on one-rep-maxes established in ' +
+        'your settings. Incorporates 5/3/1 squat programming.'
     },
     {
         title: 'theWeather',
