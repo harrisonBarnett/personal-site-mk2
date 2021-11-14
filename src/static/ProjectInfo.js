@@ -4,6 +4,10 @@ import memoryLong from './images/project-images/memory-long.PNG'
 import memorySquare from './images/project-images/memory-square.PNG'
 import wlLong from './images/project-images/wl-long.PNG'
 import wlSquare from './images/project-images/wl-square.PNG'
+import weatherLong from './images/project-images/weather-long.PNG'
+import weatherSquare from './images/project-images/weather-square.PNG'
+import dostuffLong from './images/project-images/dostuff-long.PNG'
+import dostuffSquare from './images/project-images/dostuff-square.PNG'
 
 const projectInfo = [
     {
@@ -51,7 +55,7 @@ const projectInfo = [
     {
         title: 'apogee athletic',
         repoLink: '#',
-        liveLink: '#',
+        liveLink: 'https://apogeeathletic.com/',
         headerImg: '',
         accentImg: '',
         stack: [
@@ -64,7 +68,7 @@ const projectInfo = [
             '3rd party API',
             '3rd party library'
         ],
-        description: 'this is an app and it sure is an app'
+        description: 'The landing page and storefront for Apogee Athletic LLC, an athletic apparel company.'
     },
     {
         title: 'wl_',
@@ -90,10 +94,10 @@ const projectInfo = [
     },
     {
         title: 'theWeather',
-        repoLink: '#',
-        liveLink: '#',
-        headerImg: '',
-        accentImg: '',
+        repoLink: 'https://github.com/harrisonBarnett/weather',
+        liveLink: 'https://harrisonbarnett.github.io/weather/',
+        headerImg: weatherLong,
+        accentImg: weatherSquare,
         stack: [
             'javascript',
             'react',
@@ -104,14 +108,16 @@ const projectInfo = [
             'async',
             '3rd party API'
         ],
-        description: 'this is an app and it sure is an app'
+        description: 'A simple, minimalistically-styled weather application utilizing ' +
+        'the OpenWeatherMap API. Returns a pleasant background image depending on the ' +
+        'weather type and time of day.'
     },
     {
         title: 'doStuff',
-        repoLink: '#',
-        liveLink: '#',
-        headerImg: '',
-        accentImg: '',
+        repoLink: 'https://github.com/harrisonBarnett/to-do',
+        liveLink: 'https://harrisonbarnett.github.io/to-do/',
+        headerImg: dostuffLong,
+        accentImg: dostuffSquare,
         stack: [
             'javascript',
             'react',
@@ -122,7 +128,8 @@ const projectInfo = [
             'modals',
             'state handling'
         ],
-        description: 'this is an app and it sure is an app'
+        description: 'A note-taking app. Add a group to organize your notes as you see ' +
+        'fit. Notes are deletable and editable, though there is sadly no persistence.'
     },
 ]
 export default projectInfo

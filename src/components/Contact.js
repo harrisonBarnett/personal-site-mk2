@@ -1,39 +1,36 @@
 import Github from '../static/images/tech-images/github-logo.png'
 import LinkedIn from '../static/images/tech-images/linkedin-logo.png'
 import CodePen from '../static/images/tech-images/codepen-logo.png'
-import Gmail from '../static/images/tech-images/gmail-logo.png'
 const Contact = () => {
     return(
         <ul id='contact-container'>
-            <li
-            className='contact-group'>
-                <img 
-                className='contact-group-img'
-                src={Github}></img>
+            <li>
+                <a href='https://github.com/harrisonBarnett' target='_blank'>
+                    <img 
+                    className='contact-group-img'
+                    src={Github}></img>
+                </a>
             </li>
-            <li
-            className='contact-group'>
-                <img 
-                className='contact-group-img'
-                src={LinkedIn}></img>
+            <li>
+                <a href='https://www.linkedin.com/in/harrison-barnett-sc/' target='_blank'>
+                    <img 
+                    className='contact-group-img'
+                    src={LinkedIn}></img>
+                </a>
             </li>
-            <li
-            className='contact-group'>
-                <img 
-                className='contact-group-img'
-                src={CodePen}></img>
+            <li>
+                <a href='https://codepen.io/harrisonbarnett' target='_blank'>
+                    <img 
+                    className='contact-group-img'
+                    src={CodePen}></img>
+                </a>
             </li>
-            <li
-            className='contact-group'>
-                <img 
-                className='contact-group-img'
-                src={Gmail}></img>
-            </li>
-            <li
-            className='contact-group'>
-                <div 
-                className='contact-group-img'
-                id='sunbear'></div>
+            <li>
+                <a href='https://www.google.com/search?q=sun+bear' target='_blank'>
+                    <div 
+                    className='contact-group-img'
+                    id='sunbear'></div>
+                </a>
             </li>
         </ul>
     )

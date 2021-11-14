@@ -10,9 +10,12 @@ const Home = () => {
         <div id='homepage'>
             <div
             id='welcome-group'>
-                <div
-                id='welcome-img'>
+                <div id='welcome-img-container'>
+                    <div
+                    id='welcome-img'>
+                    </div>
                 </div>
+
                 <div id='welcome-text-container'>
                     <p
                     id='welcome-text'>You're looking at a highly-motivated, self-taught developer looking for a breakthrough

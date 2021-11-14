@@ -47,8 +47,8 @@ html, body {
     background-repeat: no-repeat;
 
     box-shadow: 
-        2px 2px 4px rgba(0,0,0,.15),
-        2px 2px 8px rgba(0,0,0,.15);
+        2px 2px 4px rgba(112, 141, 157,.5),
+        2px 2px 8px rgba(112, 141, 157,.5);
 }
 #title-container {
     position: absolute;
@@ -91,6 +91,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1vmax;
 }
 #contact-container {
     gap: 2vmax;
@@ -103,6 +104,10 @@ html, body {
     bottom: .5rem;
     opacity: .25;
 }
+.contact-group-img,
+.contact-group-img:hover {
+    transition: all 200ms ease-in-out;
+}
 .contact-group-img {
     width: 4vmax;
     height: 4vmax;
@@ -110,6 +115,9 @@ html, body {
     max-height: 80px;
     border-radius: 50%;
     background: rgb(177, 177, 177);
+}
+.contact-group-img:hover {
+    transform: translateY(-1vmax);
 }
 #sunbear {
     background-image: url('./images/sunbear1.jpg');
@@ -126,6 +134,7 @@ html, body {
 }
 #welcome-img {
     position: relative;
+    z-index: 2;
     width: 25vmax;
     height: 25vmax;
     max-width: 400px;
@@ -136,8 +145,18 @@ html, body {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50%;
+
+    box-shadow:
+    2px 2px 8px rgba(112, 141, 157, .5),
+    -2px -2px 8px rgba(112, 141, 157, .5);
 }
-#welcome-img::before {
+#welcome-img-container {
+    position: relative;
+    z-index: 2;
+    height: fit-content;
+    width: fit-content;
+}
+#welcome-img-container::before {
     position: absolute;
     content: '';
     top: -8%;
@@ -148,7 +167,7 @@ html, body {
     border-radius: 50%;
     border: 2px solid var(--primary-color);  
 }
-#welcome-img::after {
+#welcome-img-container::after {
     position: absolute;
     content: '';
     bottom: -8%;
@@ -176,21 +195,6 @@ html, body {
 
     background: lightgray;
 }
-#welcome-text::before {
-    content: '';
-    position: absolute;
-    top: -1rem;
-    left: -1rem;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-
-    border: 2px solid var(--primary-color);
-    box-shadow: 
-    -2px -2px 8px rgba(0,0,0,.1),
-    -4px -4px 12px rgba(0,0,0,.1)
-    ;
-}
 #welcome-text::after {
     content: '';
     position: absolute;
@@ -201,7 +205,7 @@ html, body {
 
     border-right: 2px solid var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
-    box-shadow: 4px 4px 8px rgba(0,0,0,.1);
+    box-shadow: 4px 4px 8px rgba(112, 141, 157,.25);
 }
 /* tech */
 #tech-container {
@@ -246,15 +250,16 @@ html, body {
 .project-item {
     height: 45vmax;
     width: 40vmax;
+    padding: 1vmax;
 
     display: flex;
     flex-direction: column;
     gap: 1rem;
 
-    background: white;
+    background: rgb(255, 255, 255);
     box-shadow: 
-    2px 2px 4px rgba(0,0,0,.15),
-    2px 2px 8px rgba(0,0,0,.15);
+    2px 2px 4px rgba(112, 141, 157,.25),
+    2px 2px 8px rgba(112, 141, 157,.25);
 }
 .project-item-title,
 .project-item-links,
@@ -283,6 +288,7 @@ html, body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    box-shadow: 1px 1px 8px rgba(112, 141, 157, .25);
 }
 .project-item-header-img {
     height: 33%;
