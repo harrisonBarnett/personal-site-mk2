@@ -1,13 +1,13 @@
-import resumatorLong from './images/project-images/resumator-long.PNG'
-import resumatorSquare from './images/project-images/resumator-square.PNG'
-import memoryLong from './images/project-images/memory-long.PNG'
-import memorySquare from './images/project-images/memory-square.PNG'
-import wlLong from './images/project-images/wl-long.PNG'
-import wlSquare from './images/project-images/wl-square.PNG'
-import weatherLong from './images/project-images/weather-long.PNG'
-import weatherSquare from './images/project-images/weather-square.PNG'
-import dostuffLong from './images/project-images/dostuff-long.PNG'
-import dostuffSquare from './images/project-images/dostuff-square.PNG'
+import resumatorLong from '../static/images/project-images/resumator-long.PNG'
+import resumatorSquare from '../static/images/project-images/resumator-square.PNG'
+import memoryLong from '../static/images/project-images/memory-long.PNG'
+import memorySquare from '../static/images/project-images/memory-square.PNG'
+import wlLong from '../static/images/project-images/wl-long.PNG'
+import wlSquare from '../static/images/project-images/wl-square.PNG'
+import weatherLong from '../static/images/project-images/weather-long.PNG'
+import weatherSquare from '../static/images/project-images/weather-square.PNG'
+import dostuffLong from '../static/images/project-images/dostuff-long.PNG'
+import dostuffSquare from '../static/images/project-images/dostuff-square.PNG'
 
 const projectInfo = [
     {

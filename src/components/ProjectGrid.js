@@ -1,5 +1,5 @@
 import Tilt from 'react-parallax-tilt'
-import projectInfo from '../static/projectInfo'
+import projectInfo from './projectInfo'
 const ProjectGrid = () => {
     const mapped = projectInfo.map(info => {
         return (
