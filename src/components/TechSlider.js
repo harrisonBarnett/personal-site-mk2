@@ -17,6 +17,7 @@ import Photopea from '../static/images/tech-images/photopea-logo.png'
 import Python from '../static/images/tech-images/python-logo.png'
 import ReactLogo from '../static/images/tech-images/react-logo.png'
 import SQL from '../static/images/tech-images/sql-logo.png'
+import Svelte from '../static/images/tech-images/svelte-logo.png'
 
 SwiperCore.use([ Navigation, Mousewheel, Autoplay ])
 
@@ -74,6 +75,9 @@ const TechSlider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img src={SQL}></img>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Svelte}></img>
         </SwiperSlide>
     </Swiper>
     )
