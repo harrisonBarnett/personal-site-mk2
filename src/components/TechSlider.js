@@ -18,10 +18,15 @@ import Python from '../static/images/tech-images/python-logo.png'
 import ReactLogo from '../static/images/tech-images/react-logo.png'
 import SQL from '../static/images/tech-images/sql-logo.png'
 import Svelte from '../static/images/tech-images/svelte-logo.png'
+import Postgres from '../static/images/tech-images/postgres-logo.png'
+import Node from '../static/images/tech-images/node-logo.png'
+import Mongo from '../static/images/tech-images/mongo-logo.png'
+
 
 SwiperCore.use([ Navigation, Mousewheel, Autoplay ])
 
 const TechSlider = () => {
+
     return (
       <Swiper
       modules={[ Navigation, Mousewheel, Autoplay ]}
@@ -34,50 +39,76 @@ const TechSlider = () => {
       mousewheel
       autoplay={{
           delay: 2500,
-          disableOnInteraction: false
+          disableOnInteraction: true
       }}
     >
         <SwiperSlide>
-          <img src={CSS}></img>
+          <img src={CSS}></img> 
+          <p className='tech-title'>css</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src={Figma}></img>
+          <p className='tech-title'>figma</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src={Firebase}></img>
+          <p className='tech-title'>firebase</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src={Flask}></img>
+          <p className='tech-title'>flask</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src={Git}></img>
+          <p className='tech-title'>git</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src={HTML}></img>
+          <p className='tech-title'>html</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src={Java}></img>
+          <p className='tech-title'>java</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src={Javascript}></img>
+          <p className='tech-title'>javascript</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src={Jest}></img>
+          <p className='tech-title'>jest</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src={Photopea}></img>
+          <p className='tech-title'>photopea</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src={Python}></img>
+          <p className='tech-title'>python</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src={ReactLogo}></img>
+          <p className='tech-title'>react</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src={SQL}></img>
+          <p className='tech-title'>sql</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src={Svelte}></img>
+          <p className='tech-title'>svelte</p>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Postgres}></img>
+          <p className='tech-title'>postgresql</p>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Mongo}></img>
+          <p className='tech-title'>mongoDB</p>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Node}></img>
+          <p className='tech-title'>node</p>
         </SwiperSlide>
     </Swiper>
     )

@@ -8,8 +8,31 @@ import weatherLong from '../static/images/project-images/weather-long.PNG'
 import weatherSquare from '../static/images/project-images/weather-square.PNG'
 import dostuffLong from '../static/images/project-images/dostuff-long.PNG'
 import dostuffSquare from '../static/images/project-images/dostuff-square.PNG'
+import colorverseLong from '../static/images/project-images/colorverse-long.png'
+import colorverseSquare from '../static/images/project-images/colorverse-square.png'
 
 const projectInfo = [
+    {
+        title: 'colorverse',
+        repoLink: 'https://github.com/harrisonBarnett/colorverse',
+        liveLink: 'https://pedantic-jackson-d957bc.netlify.app/',
+        headerImg: colorverseLong,
+        accentImg: colorverseSquare,
+        stack: [
+            'javascript',
+            'svelte',
+            'html',
+            'css'
+        ],
+        skills: [
+            'global stores',
+            'reactivity',
+            'UX/UI development'
+        ],
+        description: 'ColorVerse is an implementation of the populare ColorSpace web application' +
+        ' built using the Svelte Javascript framework. Enter a color hex to generate a set of palettes' +
+        ' to get your creative juices flowing!'
+    },
     {
         title: 'res-u-mator',
         repoLink: 'https://github.com/harrisonBarnett/resumator',

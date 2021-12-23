@@ -222,6 +222,19 @@ html, body {
     max-width: 140px;
     max-height: 140px;
 }
+.swiper-slide .tech-title,
+.swiper-slide:hover .tech-title {
+    margin-top: .5rem;
+    text-align: center;
+    color: var(--primary-color);
+    transition: all 250ms ease;
+}
+.swiper-slide .tech-title {
+    opacity: 0;
+}
+.swiper-slide:hover .tech-title {
+    opacity: 1;
+}
 .swiper-button-next::after,
 .swiper-button-prev::after {
     color: var(--primary-color);
