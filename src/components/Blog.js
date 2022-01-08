@@ -10,7 +10,7 @@ const Blog = () => {
     // , [api])
     return (
         <div id='blogs-page'>
-            <h1>coming soon...</h1>
+            <h1>coming soon..</h1>
         </div>
     )
 }
