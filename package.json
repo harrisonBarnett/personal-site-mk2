@@ -39,5 +39,8 @@
   },
   "devDependencies": {
     "react-parallax-tilt": "^1.5.74"
+  },
+  "engines" : {
+    "node": "17.2"
   }
 }
