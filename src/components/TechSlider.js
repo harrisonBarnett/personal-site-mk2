@@ -43,71 +43,71 @@ const TechSlider = () => {
       }}
     >
         <SwiperSlide>
-          <img src={CSS}></img> 
+          <img src={CSS} alt="css logo"></img> 
           <p className='tech-title'>css</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Figma}></img>
+          <img src={Figma} alt="figma logo"></img>
           <p className='tech-title'>figma</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Firebase}></img>
+          <img src={Firebase} alt="firebase logo"></img>
           <p className='tech-title'>firebase</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Flask}></img>
+          <img src={Flask} alt="flask logo"></img>
           <p className='tech-title'>flask</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Git}></img>
+          <img src={Git} alt="git logo"></img>
           <p className='tech-title'>git</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={HTML}></img>
+          <img src={HTML} alt="html logo"></img>
           <p className='tech-title'>html</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Java}></img>
+          <img src={Java} alt="java logo"></img>
           <p className='tech-title'>java</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Javascript}></img>
+          <img src={Javascript} alt="javascript logo"></img>
           <p className='tech-title'>javascript</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Jest}></img>
+          <img src={Jest} alt="jest logo"></img>
           <p className='tech-title'>jest</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Photopea}></img>
+          <img src={Photopea} alt="photopea logo"></img>
           <p className='tech-title'>photopea</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Python}></img>
+          <img src={Python} alt="python logo"></img>
           <p className='tech-title'>python</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={ReactLogo}></img>
+          <img src={ReactLogo} alt="react logo"></img>
           <p className='tech-title'>react</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={SQL}></img>
+          <img src={SQL} alt="sql logo"></img>
           <p className='tech-title'>sql</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Svelte}></img>
+          <img src={Svelte} alt="svelte logo"></img>
           <p className='tech-title'>svelte</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Postgres}></img>
+          <img src={Postgres} alt="postgresql logo"></img>
           <p className='tech-title'>postgresql</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Mongo}></img>
+          <img src={Mongo} alt="mongoDB logo"></img>
           <p className='tech-title'>mongoDB</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Node}></img>
+          <img src={Node} alt="node logo"></img>
           <p className='tech-title'>node</p>
         </SwiperSlide>
     </Swiper>

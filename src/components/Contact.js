@@ -8,21 +8,24 @@ const Contact = () => {
                 <a href='https://github.com/harrisonBarnett' target='_blank'>
                     <img 
                     className='contact-group-img'
-                    src={Github}></img>
+                    src={Github}
+                    alt="github logo"></img>
                 </a>
             </li>
             <li>
                 <a href='https://www.linkedin.com/in/harrison-barnett-sc/' target='_blank'>
                     <img 
                     className='contact-group-img'
-                    src={LinkedIn}></img>
+                    src={LinkedIn}
+                    alt="linkedin logo"></img>
                 </a>
             </li>
             <li>
                 <a href='https://codepen.io/harrisonbarnett' target='_blank'>
                     <img 
                     className='contact-group-img'
-                    src={CodePen}></img>
+                    src={CodePen}
+                    alt="codepen logo"></img>
                 </a>
             </li>
             <li>
