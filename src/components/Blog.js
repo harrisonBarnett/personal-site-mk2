@@ -5,7 +5,6 @@ const Blog = () => {
     const [posts, setPosts] = useState([])
     const [pageNo, setPageNo] = useState([1])
     const api = process.env.REACT_APP_POSTS_API_URL
-    // const api = 'http://localhost:3000/posts/'
 
     const fetchPosts = () => {
         axios.get(api + pageNo)
@@ -34,7 +33,7 @@ const Blog = () => {
     return (
         <div id='blogs-page'>
             <h1>coming soon..</h1>
-            <div>
+            {/* <div>
                 {posts.map(post => {
                     return <p key={post.title}>{post.title}</p>
                 })}
@@ -42,7 +41,7 @@ const Blog = () => {
             <div className='paginator'>
                 <button onClick={handlePrevClick}>prev</button>
                 <button onClick={handleNextClick}>next</button>
-            </div>
+            </div> */}
         </div>
     )
 }
