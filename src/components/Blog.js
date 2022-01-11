@@ -7,11 +7,16 @@ const Blog = () => {
     const api = process.env.REACT_APP_POSTS_API_URL
 
     const fetchPosts = () => {
-        axios.get(api + pageNo)
-            .then(response => {
-                setPosts(response.data.posts)
-            })
-            .catch(err => console.error(err))
+        axios.get((api + pageNo), {
+            headers: {
+                'Authorization': `Bearer ${process.env.REACT_APP_BLOG_API_TOKEN}`
+            }
+        })
+        .then(response => {
+            console.log(api + pageNo)
+            setPosts(response.data.posts)
+        })
+        .catch(err => console.error)
     }
     useEffect(() => {
         fetchPosts()
