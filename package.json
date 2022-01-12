@@ -10,6 +10,7 @@
     "dotenv": "^10.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-parallax-tilt": "^1.5.74",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^5.0.0",
     "swiper": "^6.8.4",
@@ -38,9 +39,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "react-parallax-tilt": "^1.5.74"
   },
   "engines": {
     "node": "17.2"

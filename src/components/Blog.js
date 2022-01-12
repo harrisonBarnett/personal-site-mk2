@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
+import PrevBtn from '../static/images/nav/prev-btn.svg'
+import NextBtn from '../static/images/nav/next-btn.svg'
+
 const Blog = () => {
     const [posts, setPosts] = useState([])
     const [pageNo, setPageNo] = useState([1])
@@ -37,11 +40,15 @@ const Blog = () => {
     }
     return (
         <div id='blog-page'>
-            <h1>coming soon..</h1>
-            {/* <div className='blog-post-container'>
+            {/* <h1>coming soon..</h1> */}
+            <div className='blog-post-container'>
                 {posts.map(post => {
                     return <div className='blog-post' key={post.title}>
-                            <p className='blog-post-title'>{post.title}</p>
+                            <div className='blog-post-header'>
+                                <p className='blog-post-title'>{post.title}</p>
+                                <p className='blog-post-date'>{new Date(post.date_added).toDateString()}</p>
+                            </div>
+                            
                             {<div 
                                 className='blog-post-content' 
                                 dangerouslySetInnerHTML={{ __html: post.content }}>
@@ -50,9 +57,9 @@ const Blog = () => {
                 })}
             </div>
             <div className='paginator'>
-                <button onClick={handlePrevClick}>prev</button>
-                <button onClick={handleNextClick}>next</button>
-            </div>  */}
+                <button onClick={handlePrevClick}><img src={PrevBtn} alt='previous button'/></button>
+                <button onClick={handleNextClick}><img src={NextBtn} alt='next button'/></button>
+            </div> 
         </div>
     )
 }

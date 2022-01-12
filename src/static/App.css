@@ -344,6 +344,43 @@ html, body {
 }
 
 /* BLOG PAGE */
-.blog-post-container {
-    border: 1px solid var(--primary-color);
+.blog-post {
+    margin: 2rem 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: white;
+    box-shadow:
+    2px 2px 8px rgba(112, 141, 157, .15),
+    -2px -2px 8px rgba(112, 141, 157, .15);
+}
+.blog-post-header {
+    display: flex;
+    justify-content: space-between;
+}
+.blog-post-header p:nth-child(1) {
+    font-size: 1.8rem;
+}
+.blog-post-content, .page-generator__output {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    line-height: 1.6;
+}
+code {
+    background: var(--primary-color-light);
+}
+.paginator {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+.paginator button {
+    border: none;
+    outline: none;
+    background: none;
+}
+.paginator button img:hover {
+    cursor: pointer;
 }
