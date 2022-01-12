@@ -342,3 +342,8 @@ html, body {
         align-items: center;
     }
 }
+
+/* BLOG PAGE */
+.blog-post-container {
+    border: 1px solid var(--primary-color);
+}

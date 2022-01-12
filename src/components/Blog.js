@@ -36,17 +36,23 @@ const Blog = () => {
         }
     }
     return (
-        <div id='blogs-page'>
+        <div id='blog-page'>
             <h1>coming soon..</h1>
-            {/* <div>
+            {/* <div className='blog-post-container'>
                 {posts.map(post => {
-                    return <p key={post.title}>{post.title}</p>
+                    return <div className='blog-post' key={post.title}>
+                            <p className='blog-post-title'>{post.title}</p>
+                            {<div 
+                                className='blog-post-content' 
+                                dangerouslySetInnerHTML={{ __html: post.content }}>
+                            </div>}
+                        </div>
                 })}
             </div>
             <div className='paginator'>
                 <button onClick={handlePrevClick}>prev</button>
                 <button onClick={handleNextClick}>next</button>
-            </div> */}
+            </div>  */}
         </div>
     )
 }
