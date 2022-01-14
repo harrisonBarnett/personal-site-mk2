@@ -344,6 +344,13 @@ html, body {
 }
 
 /* BLOG PAGE */
+.blog-post-container {
+    position: relative;
+    min-height: 25vh;
+}
+.loading-prompt {
+    padding: 2rem 0;
+}
 .blog-post {
     margin: 2rem 0;
     padding: 2rem;

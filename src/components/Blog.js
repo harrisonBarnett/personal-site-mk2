@@ -5,18 +5,20 @@ import PrevBtn from '../static/images/nav/prev-btn.svg'
 import NextBtn from '../static/images/nav/next-btn.svg'
 
 const Blog = () => {
+    const [isLoading, setIsLoading] = useState(false)
     const [posts, setPosts] = useState([])
     const [pageNo, setPageNo] = useState([1])
     const api = process.env.REACT_APP_POSTS_API_URL
 
     const fetchPosts = () => {
+        setIsLoading(true)
         axios.get((api + pageNo), {
             headers: {
                 'Authorization': `Bearer ${process.env.REACT_APP_BLOG_API_TOKEN}`
             }
         })
         .then(response => {
-            console.log(api + pageNo)
+            setIsLoading(false)
             setPosts(response.data.posts)
         })
         .catch(err => console.error)
@@ -40,8 +42,12 @@ const Blog = () => {
     }
     return (
         <div id='blog-page'>
-            {/* <h1>coming soon..</h1> */}
+            
             <div className='blog-post-container'>
+                <p className='loading-prompt'
+                style={{
+                    display: isLoading ? 'block' : 'none'
+                }}>Loading posts...</p>
                 {posts.map(post => {
                     return <div className='blog-post' key={post.title}>
                             <div className='blog-post-header'>
