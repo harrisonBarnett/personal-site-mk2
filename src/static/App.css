@@ -279,10 +279,11 @@ html, body {
 .project-item-mid,
 .project-item-lists {
     display: flex;
+    gap: .25rem;
 }
 .project-item li,
 .project-item p {
-    font-size: 1.6vmax;
+    font-size: 1.4vmax;
 }
 .project-item-title {
     width: 90%;

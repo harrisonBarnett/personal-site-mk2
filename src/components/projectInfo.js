@@ -10,6 +10,8 @@ import dostuffLong from '../static/images/project-images/dostuff-long.PNG'
 import dostuffSquare from '../static/images/project-images/dostuff-square.PNG'
 import colorverseLong from '../static/images/project-images/colorverse-long.png'
 import colorverseSquare from '../static/images/project-images/colorverse-square.png'
+import sunbearsOnlyLong from '../static/images/project-images/sunbears-only-long.PNG'
+import sunbearsOnlySquare from '../static/images/project-images/sunbears-only-square.PNG'
 
 const projectInfo = [
     {
@@ -32,6 +34,27 @@ const projectInfo = [
         description: 'ColorVerse is an implementation of the populare ColorSpace web application' +
         ' built using the Svelte Javascript framework. Enter a color hex to generate a set of palettes' +
         ' to get your creative juices flowing!'
+    },
+    {
+        title: 'members only',
+        repoLink: 'https://github.com/harrisonBarnett/members-only',
+        liveLink: 'https://sunbears-only.herokuapp.com/dashboard',
+        headerImg: sunbearsOnlyLong,
+        accentImg: sunbearsOnlySquare,
+        stack: [
+            'node.js',
+            'express.js',
+            'mongoDB'
+        ],
+        skills: [
+            'noSQL queries',
+            'authentication',
+            'CRUD operations'
+        ],
+        description: 'members_only is a simple private messaging application demonstrating dynamic content' +
+        ' rendered depending on authentication. Users can register, log in and post messages. Unauthorized' +
+        ' visitors can only view message content. Further, users can enter a secret admin password to grant' +
+        ' priviletges to delete posts.'
     },
     {
         title: 'res-u-mator',
@@ -75,24 +98,24 @@ const projectInfo = [
         " 'Adventure Time.' See if you can beat your own high score in this exploration" +
         " of React functional components and hooks."
     },
-    {
-        title: 'apogee athletic',
-        repoLink: '#',
-        liveLink: 'https://apogeeathletic.com/',
-        headerImg: '',
-        accentImg: '',
-        stack: [
-            'vanilla javascript',
-            'HTML',
-            'CSS'
-        ],
-        skills: [
-            'e-commerce',
-            '3rd party API',
-            '3rd party library'
-        ],
-        description: 'The landing page and storefront for Apogee Athletic LLC, an athletic apparel company.'
-    },
+    // {
+    //     title: 'apogee athletic',
+    //     repoLink: '#',
+    //     liveLink: 'https://apogeeathletic.com/',
+    //     headerImg: '',
+    //     accentImg: '',
+    //     stack: [
+    //         'vanilla javascript',
+    //         'HTML',
+    //         'CSS'
+    //     ],
+    //     skills: [
+    //         'e-commerce',
+    //         '3rd party API',
+    //         '3rd party library'
+    //     ],
+    //     description: 'The landing page and storefront for Apogee Athletic LLC, an athletic apparel company.'
+    // },
     {
         title: 'wl_',
         repoLink: 'https://github.com/harrisonBarnett/wl_',
