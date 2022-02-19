@@ -21,6 +21,8 @@ import Svelte from '../static/images/tech-images/svelte-logo.png'
 import Postgres from '../static/images/tech-images/postgres-logo.png'
 import Node from '../static/images/tech-images/node-logo.png'
 import Mongo from '../static/images/tech-images/mongo-logo.png'
+import CSharp from '../static/images/tech-images/csharp-logo.png'
+import NetCore from '../static/images/tech-images/netcore-logo.png'
 
 
 SwiperCore.use([ Navigation, Mousewheel, Autoplay ])
@@ -109,6 +111,14 @@ const TechSlider = () => {
         <SwiperSlide>
           <img src={Node} alt="node logo"></img>
           <p className='tech-title'>node</p>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={NetCore} alt="net core logo"></img>
+          <p className='tech-title'>.net core</p>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={CSharp} alt="c sharp logo"></img>
+          <p className='tech-title'>c#</p>
         </SwiperSlide>
     </Swiper>
     )

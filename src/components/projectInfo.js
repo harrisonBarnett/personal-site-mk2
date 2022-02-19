@@ -12,6 +12,8 @@ import colorverseLong from '../static/images/project-images/colorverse-long.png'
 import colorverseSquare from '../static/images/project-images/colorverse-square.png'
 import sunbearsOnlyLong from '../static/images/project-images/sunbears-only-long.PNG'
 import sunbearsOnlySquare from '../static/images/project-images/sunbears-only-square.PNG'
+import hnReaderSquare from '../static/images/project-images/hnreader-square.png'
+import hnReaderLong from '../static/images/project-images/hnreader-long.png'
 
 const projectInfo = [
     {
@@ -54,7 +56,26 @@ const projectInfo = [
         description: 'members_only is a simple private messaging application demonstrating dynamic content' +
         ' rendered depending on authentication. Users can register, log in and post messages. Unauthorized' +
         ' visitors can only view message content. Further, users can enter a secret admin password to grant' +
-        ' priviletges to delete posts.'
+        ' privileges to delete posts.'
+    },
+    {
+        title: 'HNReader',
+        repoLink: 'https://github.com/harrisonBarnett/HNReader',
+        liveLink: 'https://github.com/harrisonBarnett/HNReader',
+        headerImg: hnReaderLong,
+        accentImg: hnReaderSquare,
+        stack: [
+            'C#',
+            '.NET Core'
+        ],
+        skills: [
+            'NuGet',
+            '3rd party API',
+            'console development'
+        ],
+        description: 'HNReader is a terminal-based application for reading the latest stories on the popular' +
+        ' Hacker News website. The application communicates with their free and open API to display top stories.' +
+        ' Use commands in your console to page through stories and read comments.' 
     },
     {
         title: 'res-u-mator',
@@ -119,7 +140,7 @@ const projectInfo = [
     {
         title: 'wl_',
         repoLink: 'https://github.com/harrisonBarnett/wl_',
-        liveLink: '#',
+        liveLink: 'https://github.com/harrisonBarnett/wl_',
         headerImg: wlLong,
         accentImg: wlSquare,
         stack: [
