@@ -317,11 +317,14 @@ html, body {
     margin: 0 auto;
 }
 .project-item-lists {
+    margin: .25rem;
     gap: 1rem;
     line-height: 1.6;
 }
 .project-item-list-left li,
 .project-item-list-right li {
+    margin: .25rem;
+    font-size: 1rem;
     list-style: circle !important;
 }
 .project-item-accent-img {
