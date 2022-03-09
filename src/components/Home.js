@@ -3,7 +3,7 @@ import TechSlider from './TechSlider'
 const Home = () => {
     const Link = () => {
         return(
-            <NavLink to='/projects'>here</NavLink>
+            <NavLink to='/projects' className="projects-link">here</NavLink>
         )
     }
     return(
@@ -21,7 +21,7 @@ const Home = () => {
                     id='welcome-text'>You're looking at a highly-motivated, self-taught developer looking for a breakthrough
                      opportunity as a professional software developer. Please regard this site as proof that I know how to play  
                     on computers. You are welcome to peruse a selection of the technologies I have studied thus far below. Check
-                    out some of my projects {<Link />} and feel free to contact me through any channel you prefer.</p>
+                    out some of my projects {<Link/>} and feel free to contact me through any channel you prefer.</p>
                 </div>
             </div>
             <div id='tech-container'>

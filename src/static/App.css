@@ -195,6 +195,10 @@ html, body {
 
     background: lightgray;
 }
+.projects-link {
+    position: relative;
+    z-index: 999;
+}
 #welcome-text::after {
     content: '';
     position: absolute;
