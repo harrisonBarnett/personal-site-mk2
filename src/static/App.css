@@ -357,7 +357,7 @@ html, body {
     min-height: 25vh;
 }
 .loading-prompt {
-    padding: 2rem 0;
+    margin: 4rem auto;
 }
 .blog-post {
     margin: 2rem 0;

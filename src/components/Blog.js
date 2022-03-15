@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
+import Loading from '../static/images/Circles-menu-3.gif'
 import PrevBtn from '../static/images/nav/prev-btn.svg'
 import NextBtn from '../static/images/nav/next-btn.svg'
 
@@ -30,7 +31,7 @@ const Blog = () => {
         if(pageNo === 1) {
             setPageNo(1)
         } else {
-            setPageNo(parseInt(pageNo) - 1)
+            setPageNo(parseInt(pageNo) - 1)``
         }
     }
     const handleNextClick = () => {
@@ -44,10 +45,11 @@ const Blog = () => {
         <div id='blog-page'>
             
             <div className='blog-post-container'>
-                <p className='loading-prompt'
+                <img className='loading-prompt'
+                src={Loading}
                 style={{
                     display: isLoading ? 'block' : 'none'
-                }}>Loading posts...</p>
+                }}/>
                 {posts.map(post => {
                     return <div className='blog-post' key={post.title}>
                             <div className='blog-post-header'>
