@@ -399,3 +399,49 @@ code {
 .paginator button img:hover {
     cursor: pointer;
 }
+
+/* workout app styles */
+.workout-app {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.workout-home {
+    padding: 2rem 0;
+}
+.workout-rotation {
+    display: flex;
+    gap: 2rem;
+}
+.workout-session {
+    position: relative;
+    z-index: -1;
+    height: 0 !important;
+    opacity: 0;
+    width: 100%;
+    color: white;
+    background: black;
+}
+.workout-session.session-active {
+    z-index: 0;
+    height: 100% !important;
+    opacity: 1;
+}
+table {
+    width: 100%;
+}
+td {
+    text-align: center;
+}
+table, th, td {
+    border: 2px solid white;
+}
+.amrap-cell {
+    border: 2px solid goldenrod;
+}
+.workout-session-btn {
+    color: white;
+    background: black;
+    border: 2px solid white;
+    width: 100%;
+    font-size: 1.4rem;
+}
