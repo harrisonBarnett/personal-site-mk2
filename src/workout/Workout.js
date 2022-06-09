@@ -6,99 +6,170 @@ import Bench from './Bench'
 import OHP from './OHP'
 
 const Workout = () => {
-    const [squat, setSquat] = useState({})
-    const [dead, setDead] = useState({})
-    const [bench, setBench] = useState({})
-    const [ohp, setOhp] = useState({})
-    const [prevRotation, setPrevRotation] = useState({})
-    const [prevDate, setPrevDate] = useState({})
     const [loading, setLoading] = useState(true)
+    const [formData, setFormData] = useState({})
 
     useEffect(() => {
         initializeData();
-    })
-
-    async function initializeData() {
-        await fetch("https://sunbear-blog-api.herokuapp.com/workout")
+    }, [])
+    
+    // load data from backend
+    // const testurl = "http://localhost:3001/workout"
+    const liveurl = "https://sunbear-blog-api.herokuapp.com/workout"
+    const initializeData = async () => {
+        await fetch(liveurl)
             .then(response => response.json())
             .then(data => {
                 data=data[0]
-                setSquat(parseInt(data.Squat))
-                setDead(parseInt(data.Dead))
-                setBench(parseInt(data.Bench))
-                setOhp(parseInt(data.OHP))
-                setPrevRotation(data.PrevRotation)
-                setPrevDate(data.PrevDate)
+                setFormData({
+                    squat: parseInt(data.Squat),
+                    dead: parseInt(data.Dead),
+                    bench: parseInt(data.Bench),
+                    ohp: parseInt(data.OHP),
+                    prevDate: data.PrevDate,
+                    prevRotation: data.PrevRotation
+                })
                 setLoading(false)
             })
     }
-    function killCurrent() {
+    // kills the current session page
+    const killCurrent = () => {
         const currentPage = document.querySelector('.session-active');
         if(currentPage != null) {
             currentPage.classList.toggle('session-active')
         }
     }
-    function renderWorkout(rotation) {
+    // swaps between session screens
+    const renderWorkout = rotation => {
         function setCurrent(name) {
             const toSet = document.querySelector(name)
             toSet.classList.toggle('session-active')
         }
+        killCurrent()
         switch(rotation) {
             case "A":
-                killCurrent()
                 setCurrent(".session-squat")
                 break;
             case "B":
-                killCurrent()
                 setCurrent(".session-dead")
                 break;
             case "C":
-                killCurrent()
                 setCurrent(".session-bench")
                 break;
             case "D":
-                killCurrent()
                 setCurrent(".session-ohp")
                 break;
             default:
                 break;
         }
     }
+    // get current date
+    const getDate = () => {
+        const date = new Date()
+        const day = date.getDate()
+        const month = date.getMonth() + 1
+        return month + '/' + day
+    }
+    // on fail
+    const failSession = rotation => {
+        killCurrent()
+        let toSend = {
+            squat: formData.squat,
+            dead: formData.dead,
+            bench: formData.bench,
+            ohp: formData.ohp,
+            prevDate: getDate(),
+            prevRotation: rotation
+        };
+        setFormData(toSend)
+        submitNumbers(toSend)
+    }
+    // on make
+    const makeSession = async rotation => {
+        let toSend = {
+            squat: formData.squat,
+            dead: formData.dead,
+            bench: formData.bench,
+            ohp: formData.ohp,
+            prevDate: getDate(),
+            prevRotation: rotation
+        };
+        killCurrent()
+        switch(rotation) {
+            case "A":
+                toSend.squat += 5
+                break;
+            case "B":
+               toSend.dead += 5
+                break;
+            case "C":
+                toSend.bench += 5
+                break;
+            case "D":
+                toSend.ohp += 5
+                break;
+            default:
+                break;
+        }
+        setFormData(toSend)
+        submitNumbers(toSend)
+    }
+    // submit all shits to the thing
+    const submitNumbers = async obj => {
+        await fetch(liveurl, {
+        method: 'POST',
+        headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(obj)
+     })
+    }
 
     const content = loading 
         ? <h1>loading...</h1> 
         : <Homescreen 
-            squat={squat} 
-            dead={dead} 
-            bench={bench} 
-            ohp={ohp} 
-            prevRotation={prevRotation} 
-            prevDate={prevDate}
-            renderWorkout={renderWorkout}/>
+            squat={formData.squat} 
+            dead={formData.dead} 
+            bench={formData.bench} 
+            ohp={formData.ohp} 
+            prevRotation={formData.prevRotation} 
+            prevDate={formData.prevDate}
+            renderWorkout={renderWorkout}
+            submit={submitNumbers}/>
 
     return (
         <div className="workout-app">
-            <Squat squat={squat} 
-            dead={dead} 
-            bench={bench} 
-            ohp={ohp}
-            close={killCurrent}/>
-            <Dead squat={squat} 
-            dead={dead} 
-            bench={bench} 
-            ohp={ohp}
-            close={killCurrent}/>
-            <Bench squat={squat} 
-            dead={dead} 
-            bench={bench} 
-            ohp={ohp}
-            close={killCurrent}/>
-            <OHP squat={squat} 
-            dead={dead} 
-            bench={bench} 
-            ohp={ohp}
-            close={killCurrent}/>
             {content}
+            <Squat squat={formData.squat} 
+            dead={formData.dead} 
+            bench={formData.bench} 
+            ohp={formData.ohp}
+            submit={submitNumbers}
+            make={makeSession}
+            fail={failSession}
+            close={killCurrent}/>
+            <Dead squat={formData.squat} 
+            dead={formData.dead} 
+            bench={formData.bench} 
+            ohp={formData.ohp}
+            make={makeSession}
+            fail={failSession}
+            close={killCurrent}/>
+            <Bench squat={formData.squat} 
+            dead={formData.dead} 
+            bench={formData.bench} 
+            ohp={formData.ohp}
+            make={makeSession}
+            fail={failSession}
+            close={killCurrent}/>
+            <OHP squat={formData.squat} 
+            dead={formData.dead} 
+            bench={formData.bench} 
+            ohp={formData.ohp}
+            make={makeSession}
+            fail={failSession}
+            close={killCurrent}/>
         </div>
     )
 }

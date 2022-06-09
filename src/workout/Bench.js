@@ -102,9 +102,8 @@ const Bench = props => {
                 <td><input type="checkbox"/></td>
             </tr>
         </table>
-        <input type="checkbox"/> check if your AMRAP exceeded 3 repetitions
-        <button className="workout-session-btn" onClick={()=> alert('make')}>make</button>
-        <button className="workout-session-btn" onClick={()=> alert('fail')}>fail</button>
+        <button className="workout-session-btn" onClick={() => props.make("C")}>make</button>
+        <button className="workout-session-btn" onClick={()=> props.fail("C")}>fail</button>
         <button className="workout-session-btn" onClick={() => props.close()}>cancel</button>
     </div>
     )

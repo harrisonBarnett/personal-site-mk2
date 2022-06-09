@@ -402,28 +402,38 @@ code {
 
 /* workout app styles */
 .workout-app {
-    max-width: 400px;
-    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    background: black;
+    color: white;
 }
 .workout-home {
-    padding: 2rem 0;
+    margin: 2rem auto;
+    text-align: center;
 }
 .workout-rotation {
+    margin: 2rem 0;
     display: flex;
     gap: 2rem;
+    justify-content: center;
 }
 .workout-session {
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 100%;
+    left: 0;
     z-index: -1;
-    height: 0 !important;
     opacity: 0;
-    width: 100%;
-    color: white;
     background: black;
 }
 .workout-session.session-active {
     z-index: 0;
-    height: 100% !important;
+    bottom: 0;
     opacity: 1;
 }
 table {
@@ -444,4 +454,13 @@ table, th, td {
     border: 2px solid white;
     width: 100%;
     font-size: 1.4rem;
+}
+.workout-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: black;
 }

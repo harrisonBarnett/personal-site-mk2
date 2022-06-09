@@ -1,8 +1,6 @@
-import {useState} from 'react'
 const Squat = props => {
-    const [madeAmrap, setMadeAmrap] = useState({})
     return(
-    <div className="workout-session session-squat">
+        <div className="workout-session session-squat">
         <h1>squat</h1>
         <table>
             <tr>
@@ -104,11 +102,10 @@ const Squat = props => {
                 <td><input type="checkbox"/></td>
             </tr>
         </table>
-        <input type="checkbox"/> check if your AMRAP exceeded 3 repetitions
-        <button className="workout-session-btn" onClick={()=> alert('make')}>make</button>
-        <button className="workout-session-btn" onClick={()=> alert('fail')}>fail</button>
+        <button className="workout-session-btn" onClick={() => props.make("A")}>make</button>
+        <button className="workout-session-btn" onClick={() => props.fail("A")}>fail</button>
         <button className="workout-session-btn" onClick={() => props.close()}>cancel</button>
-    </div>
+    </div>      
     )
     
 }

@@ -10,12 +10,12 @@ import Workout from './workout/Workout'
 const App = ()=> {
   return (
     <Router>
+      <Route path = '/workout' component={Workout} />
       <Header />
       <div id='page-content'>
         <Route exact path='/' component={Home} />
         <Route path='/projects' component={Projects} />
         <Route path ='/blog' component={Blog} />
-        <Route path = '/workout' component={Workout} />
       </div>
       <Footer />
     </Router>

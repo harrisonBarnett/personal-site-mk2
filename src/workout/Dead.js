@@ -1,5 +1,4 @@
 const Dead = props => {
-
     return(
         <div className="workout-session session-dead">
         <h1>deadlift</h1>
@@ -103,9 +102,8 @@ const Dead = props => {
                 <td><input type="checkbox"/></td>
             </tr>
         </table>
-        <input type="checkbox"/> check if your AMRAP exceeded 3 repetitions
-        <button className="workout-session-btn" onClick={()=> alert('make')}>make</button>
-        <button className="workout-session-btn" onClick={()=> alert('fail')}>fail</button>
+        <button className="workout-session-btn" onClick={() => props.make("B")}>make</button>
+        <button className="workout-session-btn" onClick={()=> props.fail("B")}>fail</button>
         <button className="workout-session-btn" onClick={() => props.close()}>cancel</button>
     </div>
     )

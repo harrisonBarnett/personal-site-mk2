@@ -1,6 +1,7 @@
 const Homescreen = props => {
     return (
         <div className="workout-home">
+            <h2>hey let's fuckin lift</h2>
             <div className="workout-rotation">
                 <div onClick={() => props.renderWorkout("A")}>
                     <h3>{props.squat}</h3>
@@ -19,8 +20,6 @@ const Homescreen = props => {
                     <h3>ohp</h3>
                 </div>
             </div>
-            
-
         </div>
     )
 }

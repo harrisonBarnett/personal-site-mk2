@@ -102,8 +102,8 @@ const OHP = props => {
                 <td><input type="checkbox"/></td>
             </tr>
         </table>
-        <button className="workout-session-btn" onClick={()=> alert('make')}>make</button>
-        <button className="workout-session-btn" onClick={()=> alert('fail')}>fail</button>
+        <button className="workout-session-btn" onClick={() => props.make("D")}>make</button>
+        <button className="workout-session-btn" onClick={()=> props.fail("D")}>fail</button>
         <button className="workout-session-btn" onClick={() => props.close()}>cancel</button>
     </div>
     )
