@@ -5,6 +5,8 @@ import Dead from './Dead'
 import Bench from './Bench'
 import OHP from './OHP'
 
+import db from '../firebase.config.js'
+
 const Workout = () => {
     const [loading, setLoading] = useState(true)
     const [formData, setFormData] = useState({})
@@ -13,24 +15,22 @@ const Workout = () => {
         initializeData();
     }, [])
     
-    // load data from backend
-    // const testurl = "http://localhost:3001/workout"
-    const liveurl = "https://sunbear-blog-api.herokuapp.com/workout"
+    // load data from backend firestore
     const initializeData = async () => {
-        await fetch(liveurl)
-            .then(response => response.json())
-            .then(data => {
-                data=data[0]
-                setFormData({
-                    squat: parseInt(data.Squat),
-                    dead: parseInt(data.Dead),
-                    bench: parseInt(data.Bench),
-                    ohp: parseInt(data.OHP),
-                    prevDate: data.PrevDate,
-                    prevRotation: data.PrevRotation
+       await db.collection('workout_data').get()
+            .then(response => {
+                response.forEach(el => {
+                    setFormData({
+                        squat: parseInt(el.data().squat),
+                        dead: parseInt(el.data().dead),
+                        bench: parseInt(el.data().bench),
+                        ohp: parseInt(el.data().ohp),
+                        prevDate: (el.data().prevDate),
+                        prevRotation: (el.data().prevRotation),
+                    })
                 })
-                setLoading(false)
             })
+            setLoading(false)
     }
     // kills the current session page
     const killCurrent = () => {
@@ -111,19 +111,22 @@ const Workout = () => {
             default:
                 break;
         }
+        console.log(toSend)
         setFormData(toSend)
         submitNumbers(toSend)
     }
     // submit all shits to the thing
     const submitNumbers = async obj => {
-        await fetch(liveurl, {
-        method: 'POST',
-        headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(obj)
-     })
+        await db.collection('workout_data')
+            .doc('workout_data')
+            .update({
+            squat: obj.squat,
+            dead: obj.dead,
+            bench: obj.bench,
+            ohp: obj.ohp,
+            prevDate: obj.prevDate,
+            prevRotation: obj.prevRotation
+        })
     }
 
     const content = loading 
