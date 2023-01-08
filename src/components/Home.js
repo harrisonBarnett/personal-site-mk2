@@ -1,5 +1,6 @@
-import {NavLink} from 'react-router-dom'
-import TechSlider from './TechSlider'
+import {NavLink} from 'react-router-dom';
+import TechSlider from './TechSlider';
+import TechCloud from './TechCloud';
 const Home = () => {
     const Link = () => {
         return(
@@ -26,6 +27,7 @@ const Home = () => {
             </div>
             <div id='tech-container'>
                 <TechSlider />
+                <TechCloud />
             </div>
         </div>
     )
