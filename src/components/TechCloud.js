@@ -45,6 +45,8 @@ const TechCloud = () => {
 
 export default TechCloud;
 
+// TODO: fix the ones with x's. react doens't like the namespaces
+
 /* 
 git
 postgres
