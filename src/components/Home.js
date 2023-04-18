@@ -27,7 +27,7 @@ const Home = () => {
             </div>
             <div id='tech-container'>
                 <TechSlider />
-                <TechCloud />
+                //<TechCloud />
             </div>
         </div>
     )
